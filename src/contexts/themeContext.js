@@ -1,8 +1,9 @@
 import React, {createContext, Component} from 'react'
 
+//create context theme
 export const ThemeContext = createContext();
 
-class MyComponent extends Component {
+class ThemeContextProvider extends Component {
 
     state = {
         isLightTheme: true,
@@ -18,6 +19,9 @@ class MyComponent extends Component {
         }
     };
 
+    /**
+     * to change theme
+     */
     toogleTheme = () => {
         this.setState({
             isLightTheme: !this.state.isLightTheme
@@ -33,4 +37,4 @@ class MyComponent extends Component {
     }
 }
 
-export default MyComponent;
+export default ThemeContextProvider;
