@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 // to generated unique id
 import uuid from 'uuid/v1';
 // components
@@ -12,6 +12,8 @@ const SongList = () => {
         {title: 'song 3', id: 3}
     ]);
 
+    const [age, setAge] = useState(20);
+
     /**
      * add a song
      * @param {string} title
@@ -19,6 +21,16 @@ const SongList = () => {
     const addSong = (title) => {
         setSong([...songs, {title, id: uuid()}])
     };
+
+    //run every time state change or component render and run on initial render
+    useEffect(e => {
+        console.log('state change')
+    });
+
+    // run only songs change (watch)
+    useEffect(e => {
+        console.log('song change')
+    }, [songs]);
 
     return (
         <div className={`song-list`}>
@@ -31,7 +43,9 @@ const SongList = () => {
                     })
                 }
             </ul>
+            {/*child component add song*/}
             <NewSongForm addSong={addSong}/>
+            <button onClick={() => setAge(age + 1)}>add age {age}</button>
         </div>
     )
 };
