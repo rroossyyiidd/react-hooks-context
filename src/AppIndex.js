@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import HooksPage from './pages/hooksPage/index';
 import ContextPage from './pages/contextPage/index';
 import HomePage from './pages/homePage/index';
+import LearnCssPage from './pages/learnCssPage/index';
 
 class AppIndex extends Component {
     render() {
@@ -15,6 +16,7 @@ class AppIndex extends Component {
                         <Route exact path={`/`} component={HomePage}/>
                         <Route exact path={`/context`} component={ContextPage}/>
                         <Route exact path={`/hooks`} component={HooksPage}/>
+                        <Route exact path={`/learncss`} component={LearnCssPage}/>
                     </Switch>
                 </Router>
             </div>

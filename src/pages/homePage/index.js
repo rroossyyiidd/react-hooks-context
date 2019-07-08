@@ -11,6 +11,9 @@ class HomePage extends Component {
                 <Link to={{pathname: `/hooks`}}>
                     <button>go to hooks</button>
                 </Link>
+                <Link to={{pathname: `/learncss`}}>
+                    <button>go to learn css</button>
+                </Link>
             </div>
         );
     }
