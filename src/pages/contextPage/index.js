@@ -6,6 +6,7 @@ import ThemeToogle from '../../components/themeToogle';
 // context provider
 import ThemeContextProvider from '../../contexts/themeContext';
 import AuthContextProvider from '../../contexts/authContext';
+import BookListProvider from '../../contexts/bookContext';
 //style
 import './index.css'
 
@@ -15,7 +16,9 @@ function Index() {
             <ThemeContextProvider>
                 <AuthContextProvider>
                     <Navbar/>
-                    <BookList/>
+                    <BookListProvider>
+                        <BookList/>
+                    </BookListProvider>
                     <ThemeToogle/>
                 </AuthContextProvider>
             </ThemeContextProvider>
