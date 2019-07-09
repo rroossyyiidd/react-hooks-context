@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 // import context
 import {ThemeContext} from '../contexts/themeContext';
 
+// context in class component
 // class BookList extends Component {
 //     // access the context
 //     static contextType = ThemeContext;
@@ -21,7 +22,7 @@ import {ThemeContext} from '../contexts/themeContext';
 //     }
 // }
 
-//functional component
+// context in functional component
 const BookList = () => {
     // use context in functional component in react hooks
     const {isLightTheme, light, dark} = useContext(ThemeContext);
