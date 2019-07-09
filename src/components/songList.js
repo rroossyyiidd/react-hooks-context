@@ -29,7 +29,7 @@ const SongList = () => {
 
     // run only songs change (watch)
     useEffect(e => {
-        console.log('song change')
+        console.log('songs change')
     }, [songs]);
 
     return (

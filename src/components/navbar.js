@@ -13,7 +13,7 @@ class Navbar extends Component {
                     const {isLightTheme, light, dark} = themeContext;
                     const theme = isLightTheme ? light : dark;
                     return (
-                        <nav style={{background: theme.ui, color: theme.syntax}}>
+                        <nav style={{background: theme.ui, color: theme.syntax, height: 150}}>
                             <h1>Context App</h1>
                             <div onClick={toggleAuth}>
                                 {isAuthenticated ? 'Logged in' : 'Logged out'}
